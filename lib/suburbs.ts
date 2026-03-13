@@ -58,7 +58,7 @@ export const suburbs: string[] = [
 ]
 
 // Deduplicate and sort
-export const uniqueSuburbs: string[] = [...new Set(suburbs)].sort()
+export const uniqueSuburbs: string[] = Array.from(new Set(suburbs)).sort()
 
 export function suburbToSlug(suburb: string): string {
   return suburb
